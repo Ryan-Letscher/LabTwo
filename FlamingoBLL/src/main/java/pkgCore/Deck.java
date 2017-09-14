@@ -1,9 +1,17 @@
 package pkgCore;
 
+import pkgEnum.eRank;
+import pkgEnum.eSuit;
+import java.util.ArrayList
+
 public class Deck {
 
 	//	TODO: Add 'cards' attribute that is an ArrayList of Card
-	
+	public static void main(String args[]) {
+		ArrayList<Card> list = new ArrayList<Card>();}
+		public int cards;
+
+	}
 	
 	//	TODO: Add a contructor that passes in the number of decks, and then populates
 	//			ArrayList<Card> with cards (depending on number of decks).
@@ -16,4 +24,4 @@ public class Deck {
 	
 	//	TODO: Add a draw() method that will take a card from the deck and
 	//			return it to the caller
-}
+
