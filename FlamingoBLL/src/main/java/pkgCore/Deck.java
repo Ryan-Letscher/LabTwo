@@ -4,6 +4,7 @@ import pkgEnum.eRank;
 import pkgEnum.eSuit;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
@@ -44,5 +45,10 @@ public class Deck {
 
 //	TODO: Add a draw() method that will take a card from the deck and
 //			return it to the caller
+	public Card draw() {
+		Random generator= new Random();
+		int index= generator.nextInt(CardsInDeck.size());
+		return CardsInDeck.remove(index); }
+		}
+	
 
-}

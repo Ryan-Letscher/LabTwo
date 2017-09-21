@@ -3,6 +3,8 @@ package pkgCore;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import pkgEnum.eRank;
+
 public class Hand {
 
 	private int iScore;
@@ -33,10 +35,34 @@ public class Hand {
 			//			J-Q	- score = 20
 			//			8-A = score = 9 or 19
 			//			4-A = score = 5 or 15
-		}
+			
+			switch (c.geteRank()) {
+			case ACE:
+				iScore[0] += 1;
+				iScore[1] += 11;
+			
+			case JACK: case QUEEN: case KING:
+				iScore[0]+=10;
+				iScore[1]+=10;
+			   
+			}
+				
+			
+				
+			
+				
+				iScore[0]+= c.geteRank().getiRankNbr();
+			
+			
+			}
+			}
+			
+			
+			
 		
-		return iScore;
-	}
+		
+		//return iScore;
+
 	
 	public void Draw(Deck d)
 	{
